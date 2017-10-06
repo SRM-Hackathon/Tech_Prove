@@ -1,0 +1,58 @@
+/*
+SQLyog Professional v12.09 (64 bit)
+MySQL - 5.7.19-log : Database - projectdata
+*********************************************************************
+*/
+
+/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET SQL_MODE=''*/;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`projectdata` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+USE `projectdata`;
+
+/*Table structure for table `schemes` */
+
+DROP TABLE IF EXISTS `schemes`;
+
+CREATE TABLE `schemes` (
+  `s_name` varchar(250) NOT NULL,
+  `min_age` int(10) unsigned DEFAULT NULL,
+  `max_age` int(10) unsigned DEFAULT NULL,
+  `caste` varchar(20) NOT NULL,
+  `present_work` varchar(30) DEFAULT NULL,
+  `salary` float unsigned DEFAULT NULL,
+  `s_area` varchar(50) NOT NULL,
+  PRIMARY KEY (`s_name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `schemes` */
+
+/*Table structure for table `scholarship` */
+
+DROP TABLE IF EXISTS `scholarship`;
+
+CREATE TABLE `scholarship` (
+  `ss_name` varchar(250) NOT NULL,
+  `min_age` int(10) unsigned DEFAULT NULL,
+  `max_age` int(10) unsigned DEFAULT NULL,
+  `caste` varchar(12) NOT NULL,
+  `percent_10` float unsigned DEFAULT NULL,
+  `percent_12` float unsigned DEFAULT NULL,
+  `percent_high` float unsigned DEFAULT NULL,
+  PRIMARY KEY (`ss_name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `scholarship` */
+
+insert  into `scholarship`(`ss_name`,`min_age`,`max_age`,`caste`,`percent_10`,`percent_12`,`percent_high`) values ('Computer-Based Modern Office Management Training Scheme for Youth ',17,25,'ST',55,55,NULL),('Ekloti Beti Ko Shikha Vikas Chatravarti for Girls in Madhya Pradesh',15,20,'ALL',60,60,NULL),('Free Bicycle Scheme in Madhya Pradesh',12,14,'ALL',NULL,NULL,NULL),('Hostel Facility Scheme for Scheduled Tribe Students Pursuing Higher Education in New Delhi ',17,19,'ST',40,40,NULL),('Laptop Distribution Scheme for Meritorious Students in Madhya Pradesh',17,20,'All',60,75,NULL),('Mukhyamantri Medhavi Vidyarthi Yojana in Madhya Pradesh ',17,20,'ALL',NULL,75,NULL),('Overseas Scholarship For Scheduled Caste',NULL,35,'ALL',50,50,50),('Scholarship for Foreign Studies to Backward Class Students in Madhya Pradesh',20,35,'ALL',60,60,60),('Sudama Pre Metric Scholarship Scheme for Students in Madhya Pradesh',12,16,'GEN',NULL,NULL,NULL),('Swami Vivekananda Post Metric Scholarship Scheme in Madhya Pradesh',15,19,'GEN',50,NULL,NULL),('Vidyarthi Suraksha Bima Yojana in Madhya Pradesh',NULL,NULL,'ALL',NULL,NULL,NULL),('Vikramaditya Free Education ',17,20,'GEN',60,60,NULL);
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
